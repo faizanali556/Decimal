@@ -89,7 +89,6 @@ ul a:hover::after {
 .header {
   background-color: orangered;
   height: 500px;
-  margin-top: 5px;
 }
 .inner-header {
   display: flex;
