@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PROTFOLIO</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="inner-header">
+          <div class="header-div">
+            <h1>
+              Hi! <br />
+              i'm Faizan <br />
+              Front End Developer
+            </h1>
+            <p class="para">
+              I design and develop projects to make people's live simpler
+              through web Apps. I work with HTML, CSS Javascript and Reactjs
+            </p>
+          </div>
+          <div class="img-div">
+            <img src="./homeimg.jpg" />
+          </div>
+        </div>
+        <button onclick="window.location.href='/Projects.html'">
+          Projects
+        </button>
+      </header>
+      <div class="mission">
+        <div>
+          <h1>Our Mission</h1>
+          <p class="mission-p">
+            Our mission is to create innovative and user-friendly web
+            applications that simplify and enhance the everyday lives of our
+            users. We strive to leverage cutting-edge technologies like HTML,
+            CSS, JavaScript, and React.js to deliver high-quality, accessible,
+            and impactful digital experiences. Through continuous learning and
+            dedication, we aim to lead by example, foster creativity, and
+            inspire a culture of excellence and innovation in the tech
+            community.
+          </p>
+        </div>
+        <div class="mission-img">
+          <img src="misson.jpg" />
+        </div>
+      </div>
+      <footer>
+        <div>
+          <h2 class="dic">2024 Your Company. All rights reserved</h2>
+          <li class="footer">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Porjects</a>
+            <a href="#">Contact</a>
+          </li>
+        </div>
+
+        <div class="line"></div>
+        <div class="Technoligies">
+          <h2 class="dic">Technoligies we are using.</h2>
+          <li class="footer">
+            <p href="#">HTML</p>
+            <p href="#">CSS</p>
+            <p href="#">Javascript</p>
+            <p href="#">Reactjs</p>
+          </li>
+        </div>
+        <div class="line"></div>
+        <div class="Technoligies">
+          <h2 class="dic">Technoligies we are using.</h2>
+          <li class="footer">
+            <p href="#">HTML</p>
+            <p href="#">CSS</p>
+            <p href="#">Javascript</p>
+            <p href="#">Reactjs</p>
+          </li>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        });
+
+        const missionParagraph = document.querySelector(".mission-p, para");
+        observer.observe(missionParagraph);
+      });
+
+      function toggleMenu() {
+        var nav = document.querySelector(".nav-links");
+        nav.classList.toggle("nav-active");
+      }
+    </script>
+  </body>
+</html>
